@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Creating Tables</h1>
+<!--
+    <thead style = css style label> is used to seperate portions of the 
+    table for formatting, tbody and tfoot are also used 
+    
+    to format multiple comments use the tags below 
+    <colgroup>
+        <col />
+        <col style= css style/>
+    </colgroup>
+
+    scope can be added to a table heading to help visually impaired people
+    using a screen reader to identify what heading belongs to which column
+    <th scope ="col"> 
+-->
+    <table border="1">
+        <caption>this is the table caption</caption>
+        <tr>
+            <th>Number</th>
+            <th>Name</th>
+            <th>Department</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Sam</td>
+            <td rowspan="2">IT</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Tom</td>
+        </tr>
+    </table>
+    <p>*border is not usually used in HTML5 anymore css is used to format</p>
+    <table border="1">
+        <tr>
+            <th colspan="2">Cute Animals</th>
+        </tr>
+        <tr>
+            <td>bat</td>
+            <td>fox</td>
+        </tr>
+        <tr>
+            <td>cat</td>
+            <td>puppy</td>
+        </tr>
+    </table>
+</body>
+</html>
