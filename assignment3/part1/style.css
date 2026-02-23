@@ -1,3 +1,10 @@
+/*
+	Name: Mackinley Price
+	File: style.css
+	Date: 23 February 2026
+	This style sheet is to format biography.html
+*/
+
 html {
   background-color: white;
 }
@@ -5,3 +12,4 @@ html {
 body {
   font: 1.2em / 1.5 system-ui;
 }
+
