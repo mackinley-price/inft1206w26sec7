@@ -72,3 +72,14 @@ p, li{
     letter-spacing: 0.5px;
     line-height: 1;
 }
+/*Link styles*/ 
+a:link{
+    color: #aa6666;
+}
+a:visited{
+    color:#722424;
+}
+a:focus, a:hover{
+    text-decoration: none;
+    color:#d68282;
+}
