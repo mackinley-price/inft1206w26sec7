@@ -4,6 +4,17 @@
 	Date: 24 February 2026
 	This style sheet is to format index.html
 */
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=DM+Serif+Display:ital@0;1&display=swap');
+
+html{
+    font-family: "DM Serif Display", serif;
+}
+
+h1, h2{
+    font-family: "Alfa Slab One", serif;
+}
 
 /* General setup */
 
