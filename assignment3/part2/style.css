@@ -91,4 +91,32 @@ a[href*="http"]{
     padding-right: 12px;
     background-size: 10px 10px;
 }   
+/*List styles*/
+ul,ol{
+    margin: 1rem 0;
+}
+ul{
+    list-style-type: circle;
+}
+ol{
+    list-style-type:disc;
+}
+/*Navigation menu styles*/
+nav li a{
+    font-family: "Alfa Slab One", serif;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-align: center;
+    text-decoration: none;
+    width: 110%;
+    line-height: 3.5;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    border: 2px solid #aa6666;
+    display: block;
+}
 
+nav li{
+    list-style-type: none;
+    margin-bottom: 1rem;
+}
