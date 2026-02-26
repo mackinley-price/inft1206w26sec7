@@ -36,12 +36,16 @@ img {
 nav {
   background-color: black;
   padding: 0.5em;
+  position: sticky;
+  top: 0;
 }
 
 nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
+  justify-content: space-around;
+  display: flex;
 }
 
 nav a {
