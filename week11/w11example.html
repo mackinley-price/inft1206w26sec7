@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 11</title>
+</head>
+<body>
+    <h1>Week 11 - Introduction to Form</h1>
+    <!--Method can be get or post but get puts all input info in the url whereas post doesnt
+    however post cant be used locally bc it saves to a server -->
+    <form action="#"method="get">
+        <div>
+              <label for="fname">First Name</label>
+        <input type="text" id="fname"name="fname" title="Enter First Name" placeholder="First Name">
+        </div>
+       
+        <div>
+              <label for="lname">Last Name</label>
+        <input type="text" id="lname"name="lname" title="Enter Last Name" placeholder="Last Name">
+        </div> 
+
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" title="Enter Password">
+        </div>
+        <div>
+            <label for="upload">Upload Assignment </label>
+            <input type="file" id="upload" name="upload" >
+        </div>
+        <div>
+            <label for="check">Are you 18+</label>
+            <input type="checkbox" id="check" name="check">
+        </div>
+        <div>
+            <label for="">What are your hobbies</label>
+        </div>
+        <div>
+            <input type="checkbox" id = sports name = hobbies value="sports">
+            <label for="sports">Sports</label>
+            <input type="checkbox" id = reading name = hobbies value="reading">
+            <label for="reading">Reading</label>
+        </div>
+        <div>
+            <label for="">Which OS do you prefer</label>
+        </div> 
+        <div>
+            <input type="radio" name="windows" value="windows" checked>
+            <label for="">Windows</label>
+            <input type="radio" name="Lenux" value="Lenux">
+            <label for="">Lenux</label>
+        </div>
+        <div>
+            <label for="">What do you want to do this weekend</label>
+            <select name="weekend" id="weekend">
+                <option value=""></option>
+                <option value="coffee">Drink Coffee</option>
+                <option value="book">Read</option>
+                <option value="sleep">Sleeping<option>
+            </select>
+        </div>
+        <div>
+            <label for="">How is you</label>
+            <textarea name="" id="" rows="" cols="">
+            </textarea>
+        </div>
+
+        <div>
+            <input type="submit" title="Submit">
+            <input type="reset" title="Reset">
+        </div>
+
+    </form>
+</body>
+</html>
