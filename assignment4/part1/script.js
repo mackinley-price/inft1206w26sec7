@@ -1,3 +1,8 @@
+//Name: Mackinley Price
+//File: storygenerator.html
+// Date: 03 April 2026
+// This javascript file will pertain to the website storygenerator which will generate stories 
+
 // Complete variable definitions and random functions
 
 const customName = document.getElementById("custom-name");
