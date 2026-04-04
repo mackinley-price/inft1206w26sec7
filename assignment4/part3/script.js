@@ -1,3 +1,8 @@
+//Name: Mackinley Price
+//File: script.js
+// Date: 03 April 2026
+// This javascript file will pertain to the website index.html
+
 // setup canvas
 
 const canvas = document.querySelector("canvas");
