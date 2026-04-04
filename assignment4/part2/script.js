@@ -14,4 +14,20 @@ const imgs = [{ filename: "pic1.jpg", alt: "Closeup of a human eye" }, { filenam
     { filename: "pic3.jpg", alt: "Purple and white pansies" }, { filename: "pic4.jpg", alt: "Section of wall from a pharaoh's tomb" },
     { filename: "pic5.jpg", alt: "Large moth on a leaf" }
 ];
+//base url 
+const baseURL = "./img/";
 
+//for loop
+for(const img of imgs){
+    const newImg = document.createElement("img")
+    newImg.src = '${baseURL}${img.filename}';
+    newImg.alt = img.alt
+    newImg.tabIndex = "0"
+    thumbBar.appendChild(newImg);
+    newImg.addEventListener("click", updateImg);
+    newImg.addEventListener("keydown", (e) => {
+        if(e.code == "Enter"){
+            updateImg(e);
+        }
+    });
+}
