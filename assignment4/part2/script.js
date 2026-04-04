@@ -24,10 +24,16 @@ for(const img of imgs){
     newImg.alt = img.alt
     newImg.tabIndex = "0"
     thumbBar.appendChild(newImg);
-    newImg.addEventListener("click", updateImg);
+    newImg.addEventListener("click", updateDisplayedImage);
     newImg.addEventListener("keydown", (e) => {
         if(e.code == "Enter"){
-            updateImg(e);
+            updateDisplayedImage(e);
         }
     });
+}
+
+//display image function 
+function updateDisplayedImage(e){
+    displayedImage.src = e.target.src;
+    displayedImage.src = e.target.alt;
 }
