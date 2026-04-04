@@ -192,7 +192,7 @@ function loop() {
   }
 
   evilCircle.draw();
-  evilCircle.checkBounds
+  evilCircle.checkBounds();
   evilCircle.collisionDetect();
 
   requestAnimationFrame(loop);
