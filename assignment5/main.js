@@ -1,3 +1,8 @@
+//Name: Mackinley Price
+//File: main.js
+// Date: 14 April 2026
+// This javascript file will pertain to the website index.html
+
 // functionality for showing/hiding the comments section
 
 const showHideBtn = document.querySelector('.show-hide');
