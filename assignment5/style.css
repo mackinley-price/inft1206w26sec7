@@ -121,6 +121,7 @@ article, footer, .secondary {
 
 main {
   display: flex;
+  align-items: stretch;
 }
 
 article {
@@ -141,6 +142,12 @@ table {
   width: 100%;
   background-color: #dde;
   border-collapse: collapse;
+}
+
+caption{
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 th, td {
@@ -173,20 +180,32 @@ audio {
 /* Comments styling */
 
 .comments {
+  margin-top: 2rem;
   background-color: #def;
   padding: 10px;
 }
 
 .show-hide {
+  display: block;
+  width: 150px;
+  min-height: 44px;
+  margin: 0 auto 1rem;
+  text-align: center;
+  background: #333;
+  border: 0;
+  color: white;
+  font-size: 1.6rem;
   cursor: pointer;
 }
 
-.comments font[size="6"] {
-  font-size: 2rem;
+.show-hide:focus-visible {
+  outline: 3px solid #000;
+  outline-offset: 3px;
 }
 
-.comments font[size="6"]:nth-of-type(2) {
-  margin-bottom: 0;
+.comments h2, .comments h3 {
+  font-size: 2rem;
+  margin-top: 0;
 }
 
 .comment-form {
@@ -195,6 +214,7 @@ audio {
 
 .comment-form .flex-pair {
   display: flex;
+  gap: 1rem;
   padding: 0 3rem 1rem;
 }
 
@@ -202,42 +222,37 @@ audio {
   align-self: center;
   flex: 2;
   text-align: right;
-}
-
-.comment-form input {
-  margin-left: 1rem;
-  flex: 6;
-}
-
-.show-hide {
-  text-align: center;
-  width: 150px;
-}
-
-.comment-form input, .comment-form label, .show-hide {
   font-size: 1.6rem;
-  line-height: 32px;
 }
 
-.comment-form input[type="submit"], .show-hide {
+.comment-form input, .comment-form textarea {
+  flex: 6;
+  margin-left: 1rem;
+  font-size: 1.6rem;
+  padding: 0.6rem;
+}
+
+.comment-form button[type="submit"] {
+  width: 30%;
+  min-width: 160px;
+  min-height: 44px;
+  display: block;
+  margin: 0 auto;
   background: #333;
   border: 0;
   color: white;
-}
-
-.comment-form input[type="submit"] {
-  width: 30%;
-  display: block;
-  margin: 0 auto;
+  font-size: 1.6rem;
 }
 
 .comment-container {
   margin-top: 0;
+  padding: 0;
 }
 
 .comment-container li {
   list-style-type: none;
   display: flex;
+  gap: 1rem;
 }
 
 .comment-container li p:nth-child(1) {
@@ -247,4 +262,24 @@ audio {
 
 .comment-container li p:nth-child(2) {
   flex: 5;
+}
+
+@media (max-width: 700px) {
+  .comment-form .flex-pair,
+  .comment-container li {
+    flex-direction: column;
+  }
+
+  .comment-form .flex-pair {
+    padding: 0 0 1rem;
+  }
+
+  .comment-form label {
+    text-align: left;
+  }
+
+  .comment-form input,
+  .comment-form textarea {
+    margin-left: 0;
+  }
 }
