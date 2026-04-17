@@ -28,7 +28,7 @@ body {
 }
 
 .site-header h1{
-  margin: 0;
+  margin: 30px;
   font-family: 'Sonsie One', cursive;
   font-size: 4rem;
   text-align: center;
@@ -105,6 +105,14 @@ article, footer, .secondary {
   flex: 3;
 }
 
+.visually-hidden{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1;
+  overflow: hidden;
+  border: 0;
+}
 
 .search button {
   height: 32px;
