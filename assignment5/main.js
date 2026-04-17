@@ -8,16 +8,19 @@
 const showHideBtn = document.querySelector('.show-hide');
 const commentWrapper = document.querySelector('.comment-wrapper');
 
-commentWrapper.style.display = 'none';
+commentWrapper.hidden = true;
+showHideBtn.setAttribute('aria-expanded', 'false');
 
 showHideBtn.onclick = function() {
   let showHideText = showHideBtn.textContent;
   if(showHideText === 'Show comments') {
     showHideBtn.textContent = 'Hide comments';
-    commentWrapper.style.display = 'block';
+    commentWrapper.hidden = false;
+    showHideBtn.setAttribute('aria-expanded', 'true');
   } else {
     showHideBtn.textContent = 'Show comments';
-    commentWrapper.style.display = 'none';
+    commentWrapper.hidden = true;
+    showHideBtn.setAttribute('aria-expanded', 'false');
   }
 };
 
@@ -27,6 +30,7 @@ const form = document.querySelector('.comment-form');
 const nameField = document.querySelector('#name');
 const commentField = document.querySelector('#comment');
 const list = document.querySelector('.comment-container');
+const statusMessage = document.querySelector('.comment-status');
 
 form.onsubmit = function(e) {
   e.preventDefault();
@@ -40,6 +44,13 @@ function submitComment() {
   const nameValue = nameField.value;
   const commentValue = commentField.value;
 
+  if(nameValue === '' || commentValue === ''){
+    if(statusMessage){
+      statusMessage.textContent = 'Please enter both your name and your comment.'
+    }
+    return;
+  }
+
   namePara.textContent = nameValue;
   commentPara.textContent = commentValue;
 
@@ -49,4 +60,8 @@ function submitComment() {
 
   nameField.value = '';
   commentField.value = '';
+
+  if(statusMessage){
+    statusMessage.textContent = 'Comment added by ${nameValue}.';
+  }
 }
